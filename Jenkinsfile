@@ -23,7 +23,7 @@ pipeline{
 				      }
                     		}
 		    	    //sh "mvn clean install"
-					sh "Done"
+					sh "echo Done"
 		  
                  	}
                	 }  
