@@ -33,10 +33,10 @@ pipeline{
               steps{
                   script{
 					sh "echo '' | sudo -S sudo su" 
-                  	sh 'docker build . -t shadidevsecops/web-app:$Docker_tag'
+                  	sh 'sudo docker build . -t shadidevsecops/web-app:$Docker_tag'
 		  			withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
-						sh 'docker login -u shadidevsecops -p $docker_password'
-						sh 'docker push shadidevsecops/web-app:$Docker_tag'
+						sh 'sudo docker login -u shadidevsecops -p $docker_password'
+						sh 'sudo docker push shadidevsecops/web-app:$Docker_tag'
 						}
                        }
                 	}
