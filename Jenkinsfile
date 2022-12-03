@@ -22,7 +22,7 @@ pipeline{
 				      }
                     		}
 					// mvn clean install tells Maven to do the clean phase in each module before running the install phase for each module.
-		    	    //sh "mvn clean install"
+		    	    sh "mvn clean install"
 					sh "echo Done"
 		  
                  	}
@@ -32,7 +32,7 @@ pipeline{
                 {
               steps{
                   script{
-                  	sh 'docker build . -t shadidevsecops/web-app:$Docker_tag'
+                  	sh 'sudo docker build . -t shadidevsecops/web-app:$Docker_tag'
 		  			withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
 						sh 'docker login -u shadidevsecops -p $docker_password'
 						sh 'docker push shadidevsecops/web-app:$Docker_tag'
