@@ -15,12 +15,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.3.1</version>
-</plugin>
-<!-- <build>
+<build>
   <pluginManagement>
       <plugins>
        <plugin>
@@ -30,8 +25,8 @@
       </plugin>
     </plugins>
   </pluginManagement>
-  </build> -->
-<!--   <build>
+  </build>
+  <!-- <build>
     <finalName>WebApp</finalName>
   </build> -->
 </project>
