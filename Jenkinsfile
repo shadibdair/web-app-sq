@@ -28,20 +28,20 @@ pipeline{
                  	}
                	 }  
               }
-            //   stage('Docker Build')
-            //     {
-            //   steps{
-            //       script{
-			// 		// maybe error
-		  	// 		//sh 'cp -r ../SQ-Vulnerability/target .'
-            //       	sh 'docker build . -t shadidevsecops/web-app:$Docker_tag'
-		  	// 		withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
-			// 			sh 'docker login -u shadidevsecops -p $docker_password'
-			// 			sh 'docker push shadidevsecops/web-app:$Docker_tag'
-			// 			}
-            //            }
-            //     	}
-            //     }
+              stage('Docker Build')
+                {
+              steps{
+                  script{
+					// maybe error
+		  			//sh 'cp -r ../SQ-Vulnerability/target .'
+                  	sh 'docker build . -t shadidevsecops/web-app:$Docker_tag'
+		  			withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
+						sh 'docker login -u shadidevsecops -p $docker_password'
+						sh 'docker push shadidevsecops/web-app:$Docker_tag'
+						}
+                       }
+                	}
+                }
 		
             }	       	     	         
 }
