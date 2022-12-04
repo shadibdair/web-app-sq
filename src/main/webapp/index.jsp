@@ -76,8 +76,13 @@
             <p>Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels</p>
             <A href="https://docs.docker.com/get-started/overview/" ID="image1">View details.</A>
         </div>
+        <div class="col-md-4">
+            <h2>New Feature</h2>
+            <p>Devops Hello world</p>
+            <A href="https://docs.docker.com/get-started/overview/" ID="image1">View details.</A>
+        </div>
     </div>
-    
+
     <hr>
 
     <footer>
