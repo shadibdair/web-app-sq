@@ -8,17 +8,11 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Shadi DevSecOps</title>
 
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -43,7 +37,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Sign in</button>
             </form>
-        </div><!--/.navbar-collapse -->
+        </div>
     </div>
 </div>
 
@@ -52,8 +46,8 @@
     <div class="container">
         <h1>Shadi Badir - Welcome</h1>
         <p>This is from Prod Environment </p>
-        <A href="http://data.arab48.com/data/news/2015/06/12/1159877/1434107181311774.jpg" ID="image1">Shadi</A>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <A href="http://data.arab48.com/data/news/2015/06/12/1159877/1434107181311774.jpg" ID="image1">Click here to see the best player in the world.</A>
+        <A href="https://www.linkedin.com/in/shadi-badir/" ID="image1">Contact Shadi.</A>
     </div>
 </div>
 
@@ -77,11 +71,11 @@
             <p>Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
-        <!-- <div class="col-md-4">
+        <div class="col-md-4">
             <h2>Docker</h2>
             <p>Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div> -->
+        </div>
     </div>
 
     <hr>
