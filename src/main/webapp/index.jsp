@@ -50,8 +50,9 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello</h1>
-        <p>This is from Dev Environment </p>
+        <h1>Shadi Badir - Welcome</h1>
+        <p>This is from Prod Environment </p>
+        <A href="http://data.arab48.com/data/news/2015/06/12/1159877/1434107181311774.jpg" ID="image1">Shadi</A>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
@@ -86,7 +87,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Company 2022</p>
     </footer>
 </div> <!-- /container -->
 
