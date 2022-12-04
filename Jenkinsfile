@@ -1,3 +1,5 @@
+currentBuild.displayName = "Final Project # "+currentBuild.number
+
 def getDockerTag(){
         def tag = sh script: 'git rev-parse HEAD', returnStdout: true
         return tag
@@ -28,19 +30,29 @@ pipeline{
                  	}
                	 }  
               }
-              stage('Docker Build')
-                {
-              steps{
-                  script{
-					sh "echo '' | sudo -S sudo su" 
-                  	sh 'sudo docker build . -t shadidevsecops/web-app:$Docker_tag'
-		  			withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
-						sh 'sudo docker login -u shadidevsecops -p $docker_password'
-						sh 'sudo docker push shadidevsecops/web-app:$Docker_tag'
+              stage('Docker Build'){
+				steps{
+					script{
+						sh "echo '' | sudo -S sudo su" 
+						sh 'sudo docker build . -t shadidevsecops/web-app:$Docker_tag'
+						withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
+							sh 'sudo docker login -u shadidevsecops -p $docker_password'
+							sh 'sudo docker push shadidevsecops/web-app:$Docker_tag'
+							}
 						}
-                       }
-                	}
+					}
                 }
+			stage('Ansible Playbook'){
+				steps{
+					script{
+						sh '''final_tag=$(echo $Docker_tag | tr -d ' ')
+						echo ${final_tag}test
+						sed -i "s/docker_tag/$final_tag/g"  deployment.yaml
+						'''
+						ansiblePlaybook become: true, installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yaml'
+					}
+				}
+			}
 		
-            }	       	     	         
+        }	       	     	         
 }
