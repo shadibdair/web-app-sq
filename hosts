@@ -1,2 +1,2 @@
 [test]
-3.84.96.180
+ssh -i "new-key.pem" ubuntu@ec2-3-84-96-180.compute-1.amazonaws.com
