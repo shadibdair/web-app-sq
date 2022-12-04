@@ -1,2 +1,2 @@
 [test]
-3.84.96.180 ansible_connection=ssh  ansible_user=ubuntu
+3.84.96.180
