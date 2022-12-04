@@ -1,2 +1,2 @@
 [test]
-ssh -i "new-key.pem" ubuntu@ec2-3-84-96-180.compute-1.amazonaws.com
+ubuntu@ec2-3-84-96-180.compute-1.amazonaws.com
